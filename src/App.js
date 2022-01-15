@@ -1,0 +1,51 @@
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./App.css";
+import "swiper/swiper-bundle.min.css";
+import "./css/style.css"
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./layout/Home";
+import About from "./layout/About";
+import Contact from "./layout/Contact";
+import Services from "./layout/Services";
+import ServiceDetail from "./components/ServiceDetail";
+import ErrorPage from "./components/ErrorPage";
+
+export default function App() {
+  const [isActive, setActive] = useState(false);
+
+  const activeButton = () => {
+    if (window.scrollY > 200) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+  window.addEventListener("scroll", activeButton);
+  return (
+    <Router className="App">
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/services" element={<Services />} />
+        <Route exact path="/service-detail" element={<ServiceDetail />} />
+        <Route path="*" exact={true} element={<ErrorPage />} />
+      </Routes>
+      <Footer />
+      <a
+        href="#"
+        className={`back-to-top d-flex align-items-center justify-content-center ${
+          isActive ? "active" : ""
+        }`}
+      >
+        <i className="bi bi-arrow-up-short"></i>
+      </a>
+    </Router>
+  );
+}
