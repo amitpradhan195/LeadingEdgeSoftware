@@ -227,7 +227,6 @@
 .services .icon-box .icon {
   width: 64px;
   height: 64px;
-  /* background: #d0d3d4; */
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -255,7 +254,6 @@
 }
 .services .icon-box:hover {
   transform: translateY(-10px);
-  /* border-color: #564f7b; */
   border-radius: 0px;
   border-image: linear-gradient(to left, #0071bd, #ad2e3a) 1;
 }

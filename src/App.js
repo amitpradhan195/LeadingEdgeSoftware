@@ -13,7 +13,9 @@ import About from "./layout/About";
 import Contact from "./layout/Contact";
 import Services from "./layout/Services";
 import ServiceDetail from "./components/ServiceDetail";
+import ProductDetail from "./components/ProductDetail";
 import ErrorPage from "./components/ErrorPage";
+import Product from "./layout/Product";
 
 export default function App() {
   const [isActive, setActive] = useState(false);
@@ -35,6 +37,8 @@ export default function App() {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/service-detail" element={<ServiceDetail />} />
+        <Route exact path="/products" element={<Product />} />
+        <Route exact path="/product-detail" element={<ProductDetail />} />
         <Route path="*" exact={true} element={<ErrorPage />} />
       </Routes>
       <Footer />

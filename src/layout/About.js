@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Team from "../components/Team";
 import Aos from "aos/dist/aos";
 
 export default function About() {
@@ -75,7 +74,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      <Team />
     </>
   );
 }
