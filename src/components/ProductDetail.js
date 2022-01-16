@@ -1,5 +1,5 @@
 import React from "react";
-import serviceImg from '../assets/about.jpg'
+import serviceImg from "../assets/about.jpg";
 
 export default function ProductDetails() {
   return (
@@ -32,13 +32,27 @@ export default function ProductDetails() {
           </div>
 
           <div className="divMoreinfo col-lg-6 text-justify">
-            <h1 align="center">Title</h1>
+            <h1>Product Title</h1>
             <p>
               Magnam dolores commodi suscipit. Necessitatibus eius consequatur
               ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
               quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
               Quia fugiat sit in iste officiis commodi quidem hic quas.
             </p>
+
+            <span className="row">
+              <span className="col-md-6 text-center">
+                <strong>Website : {"  "}</strong>
+                <a href="/" target="_blank">
+                  www.abc.com
+                </a>
+              </span>
+
+              <span className="col-md-6 text-center">
+                <strong>Contact : {"  "}</strong>
+                <small>980000000</small>
+              </span>
+            </span>
           </div>
         </div>
       </div>

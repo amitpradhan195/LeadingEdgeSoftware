@@ -268,7 +268,7 @@
   float: left;
 }
 
-.divMoreinfo p {
+.divMoreinfo h1, p, .row {
   padding: 0 20px;
 }
 
@@ -277,7 +277,7 @@
     margin-top: 40px;
   }
 
-  .divMoreinfo p {
+  .divMoreinfo h1, p, .row  {
     padding: 0;
   }
 }
