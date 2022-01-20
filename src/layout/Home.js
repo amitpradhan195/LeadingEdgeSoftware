@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import heroImg from "../assets/hero-img.png";
 import Aos from "aos/dist/aos";
 import "aos/dist/aos.css";
-import Services from "../components/ServicesHome";
+// import WP from "../components/workingProcess";
+import FlipAnimation from "../components/FlipAnimation";
+import Services from "../components/ServicesHome2";
 import Clients from "../components/Clients";
 import CTA from "../components/CallToAction";
 
@@ -38,6 +40,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <FlipAnimation />
+      {/* <WP /> */}
       <Services />
       <Clients />
       <CTA />

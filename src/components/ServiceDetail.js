@@ -32,7 +32,7 @@ export default function ServiceDetail() {
           </div>
 
           <div className="divMoreinfo col-lg-6 text-justify">
-            <h1 align="center">Title</h1>
+            <h1>Service Title</h1>
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
             aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
             quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia

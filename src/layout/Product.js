@@ -1,9 +1,11 @@
-import React from "react";
-import "../css/Product.css";
+import React, {useCallback} from "react";
+import { useNavigate } from "react-router-dom";
+
 import Portfolio1 from "../assets/portfolio/portfolio-1.jpg";
-import Portfolio2 from "../assets/portfolio/portfolio-2.jpg";
 
 export default function Product() {
+  const navigate = useNavigate();
+  const handleOnClick = useCallback(() => navigate('/product-detail', {replace: false}), [navigate]);
   return (
     <>
       <section id="breadcrumbs" className="breadcrumbs">
@@ -32,7 +34,7 @@ export default function Product() {
           </div>
 
           <div className="row product-container">
-            <div className="col-lg-4 col-md-6 product-item">
+            <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
               <img src={Portfolio1} className="img-fluid" alt="" />
               <div className="product-info">
                 <h4>App 1</h4>
@@ -46,7 +48,7 @@ export default function Product() {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 product-item">
+            <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
               <img src={Portfolio1} className="img-fluid" alt="" />
               <div className="product-info">
                 <h4>Web 2</h4>
@@ -60,7 +62,7 @@ export default function Product() {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 product-item">
+            <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
               <img src={Portfolio1} className="img-fluid" alt="" />
               <div className="product-info">
                 <h4>Web 2</h4>
@@ -74,7 +76,7 @@ export default function Product() {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 product-item">
+            <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
               <img src={Portfolio1} className="img-fluid" alt="" />
               <div className="product-info">
                 <h4>Web 2</h4>
@@ -88,7 +90,7 @@ export default function Product() {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 product-item">
+            <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
               <img src={Portfolio1} className="img-fluid" alt="" />
               <div className="product-info">
                 <h4>Web 2</h4>
@@ -102,7 +104,7 @@ export default function Product() {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 product-item">
+            <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
               <img src={Portfolio1} className="img-fluid" alt="" />
               <div className="product-info">
                 <h4>Web 2</h4>

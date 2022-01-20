@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useCallback} from "react";
+import { useNavigate } from "react-router-dom";
+
 import webDev from "../assets/webDev.png";
 import webDesign from "../assets/webDesign.png";
 import productmgmt from "../assets/product-management.png";
@@ -7,6 +9,9 @@ import graphicDesign from "../assets/graphicDesign.png";
 import dataMgmt from "../assets/dataMgmt.png";
 
 export default function Services() {
+  const navigate = useNavigate();
+  const handleOnClick = useCallback(() => navigate('/service-detail', {replace: false}), [navigate]);
+
   return (
     <section id="services" className="services">
       <div className="container">
@@ -22,9 +27,9 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="row">
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div className="icon-box">
+        <div className="row service-list">
+          <div className="col-md-4 service-item">
+            <div className="icon-box" onClick={handleOnClick}>
               <div className="icon">
                 <img src={webDev} alt="Web Development" className="img-fluid" />
               </div>
@@ -38,8 +43,8 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div className="icon-box">
+          <div className="col-md-4 service-item">
+            <div className="icon-box" onClick={handleOnClick}>
               <div className="icon">
                 <img src={webDesign} alt="Web Design" className="img-fluid" />
               </div>
@@ -53,8 +58,8 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div className="icon-box">
+          <div className="col-md-4 service-item">
+            <div className="icon-box" onClick={handleOnClick}>
               <div className="icon">
                 <img src={productmgmt} alt="Product Management" className="img-fluid" />
               </div>
@@ -68,8 +73,8 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div className="icon-box">
+          <div className="col-md-4 mt-4 service-item">
+            <div className="icon-box" onClick={handleOnClick}>
               <div className="icon">
                 <img src={marketing} alt="Marketing" className="img-fluid" />
               </div>
@@ -83,8 +88,8 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div className="icon-box">
+          <div className="col-md-4 mt-4 service-item">
+            <div className="icon-box" onClick={handleOnClick}>
               <div className="icon">
                 <img src={graphicDesign} alt="Graphic Design" className="img-fluid" />
               </div>
@@ -98,8 +103,8 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div className="icon-box">
+          <div className="col-md-4 mt-4 service-item">
+            <div className="icon-box" onClick={handleOnClick}>
               <div className="icon">
                 <img src={dataMgmt} alt="Data Management" className="img-fluid" />
               </div>

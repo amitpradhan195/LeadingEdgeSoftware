@@ -1,13 +1,19 @@
 import React from "react";
-import serviceImg from "../assets/about.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
+import Portfolio1 from "../assets/portfolio-1.jpg";
+import Portfolio2 from "../assets/portfolio-2.jpg";
+import Portfolio3 from "../assets/portfolio-3.jpg";
 
-export default function ProductDetails() {
+SwiperCore.use([Autoplay, Pagination]);
+
+export default function ProductDetail1() {
   return (
     <>
       <section id="breadcrumbs" className="breadcrumbs">
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
-            <h2>Services</h2>
+            <h2>Products</h2>
             <ol>
               <li>
                 <a href="/">Home</a>
@@ -20,42 +26,121 @@ export default function ProductDetails() {
           </div>
         </div>
       </section>
-      <div className="container my-5">
+
+      <section className="products">
         <div className="row">
-          <div className="col-lg-6">
-            <img
-              alt="serviceImg"
-              className="img-fluid rounded shadow float-left"
-              width="100%"
-              src={serviceImg}
-            />
+          <div className="col-lg-8 text-center">
+            <Swiper
+              speed={400}
+              loop={true}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              pagination={true}
+              slidesPerView={"auto"}
+              pagination={{ clickable: true, dynamicBullets: true }}
+            >
+              <SwiperSlide>
+                <img src={Portfolio1} alt="product" className="img-fluid" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={Portfolio2} alt="product" className="img-fluid" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={Portfolio3} alt="product" className="img-fluid" />
+              </SwiperSlide>
+            </Swiper>
           </div>
-
-          <div className="divMoreinfo col-lg-6 text-justify">
-            <h1>Product Title</h1>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p>
-
-            <span className="row">
-              <span className="col-md-6 text-center">
-                <strong>Website : {"  "}</strong>
-                <a href="/" target="_blank">
-                  www.abc.com
-                </a>
-              </span>
-
-              <span className="col-md-6 text-center">
-                <strong>Contact : {"  "}</strong>
-                <small>980000000</small>
-              </span>
-            </span>
+          <div className="col-lg-4 product-details">
+            <div className="product-info">
+              <h3>Project information</h3>
+              <ul>
+                <li>
+                  <strong>Category</strong>: Web design
+                </li>
+                <li>
+                  <strong>Client</strong>: ASU Company
+                </li>
+                <li>
+                  <strong>Project date</strong>: 01 March, 2020
+                </li>
+                <li>
+                  <strong>Project URL</strong>: <a href="#">www.example.com</a>
+                </li>
+              </ul>
+            </div>
+            <div className="product-description">
+              <h2>This is an example of portfolio detail</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
+                itaque inventore commodi labore quia quia. Exercitationem
+                repudiandae officiis neque suscipit non officia eaque itaque
+                enim. Voluptatem officia accusantium nesciunt est omnis tempora
+                consectetur dignissimos. Sequi nulla at esse enim cum deserunt
+                eius.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* <section id="portfolio-details" className="portfolio-details my-5">
+        <div className="container">
+          <div className="row gy-4">
+            <div className="col-lg-8">
+              <div className="portfolio-details-slider swiper">
+                <div className="swiper-wrapper align-items-center">
+                  <div className="swiper-slide">
+                    <img src={Portfolio1} alt="" />
+                  </div>
+
+                  <div className="swiper-slide">
+                    <img src={Portfolio2} alt="" />
+                  </div>
+
+                  <div className="swiper-slide">
+                    <img src={Portfolio3} alt="" />
+                  </div>
+                </div>
+                <div className="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div className="col-lg-4">
+              <div className="portfolio-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li>
+                    <strong>Category</strong>: Web design
+                  </li>
+                  <li>
+                    <strong>Client</strong>: ASU Company
+                  </li>
+                  <li>
+                    <strong>Project date</strong>: 01 March, 2020
+                  </li>
+                  <li>
+                    <strong>Project URL</strong>:{" "}
+                    <a href="#">www.example.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="portfolio-description">
+                <h2>This is an example of portfolio detail</h2>
+                <p>
+                  Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
+                  itaque inventore commodi labore quia quia. Exercitationem
+                  repudiandae officiis neque suscipit non officia eaque itaque
+                  enim. Voluptatem officia accusantium nesciunt est omnis
+                  tempora consectetur dignissimos. Sequi nulla at esse enim cum
+                  deserunt eius.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
     </>
   );
 }
