@@ -1,7 +1,7 @@
 import React, {useCallback} from "react";
 import { useNavigate } from "react-router-dom";
 
-import Portfolio1 from "../assets/portfolio/portfolio-1.jpg";
+import Portfolio1 from "../assets/products/portfolio-1.jpg";
 
 export default function Product() {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ export default function Product() {
 
           <div className="row product-container">
             <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="" />
+              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
               <div className="product-info">
                 <h4>App 1</h4>
                 <a href="/product-detail" className="more-details">
@@ -49,7 +49,7 @@ export default function Product() {
             </div>
 
             <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="" />
+              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
               <div className="product-info">
                 <h4>Web 2</h4>
                 <a href="/product-detail" className="more-details">
@@ -63,7 +63,7 @@ export default function Product() {
             </div>
 
             <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="" />
+              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
               <div className="product-info">
                 <h4>Web 2</h4>
                 <a href="/product-detail" className="more-details">
@@ -77,7 +77,7 @@ export default function Product() {
             </div>
 
             <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="" />
+              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
               <div className="product-info">
                 <h4>Web 2</h4>
                 <a href="/product-detail" className="more-details">
@@ -91,7 +91,7 @@ export default function Product() {
             </div>
 
             <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="" />
+              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
               <div className="product-info">
                 <h4>Web 2</h4>
                 <a href="/product-detail" className="more-details">
@@ -105,7 +105,7 @@ export default function Product() {
             </div>
 
             <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="" />
+              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
               <div className="product-info">
                 <h4>Web 2</h4>
                 <a href="/product-detail" className="more-details">

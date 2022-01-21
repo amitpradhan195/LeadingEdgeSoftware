@@ -1,9 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
-import Portfolio1 from "../assets/portfolio-1.jpg";
-import Portfolio2 from "../assets/portfolio-2.jpg";
-import Portfolio3 from "../assets/portfolio-3.jpg";
+import Portfolio1 from "../assets/products/portfolio-1.jpg";
+import Portfolio2 from "../assets/products/portfolio-2.jpg";
+import Portfolio3 from "../assets/products/portfolio-3.jpg";
 
 SwiperCore.use([Autoplay, Pagination]);
 
@@ -29,7 +29,7 @@ export default function ProductDetail1() {
 
       <section className="products">
         <div className="row">
-          <div className="col-lg-8 text-center">
+          <div className="offset-lg-1 col-lg-5 text-center">
             <Swiper
               speed={400}
               loop={true}
@@ -52,7 +52,7 @@ export default function ProductDetail1() {
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className="col-lg-4 product-details">
+          <div className="col-lg-6 product-details">
             <div className="product-info">
               <h3>Project information</h3>
               <ul>
@@ -70,18 +70,17 @@ export default function ProductDetail1() {
                 </li>
               </ul>
             </div>
-            <div className="product-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
-                itaque inventore commodi labore quia quia. Exercitationem
-                repudiandae officiis neque suscipit non officia eaque itaque
-                enim. Voluptatem officia accusantium nesciunt est omnis tempora
-                consectetur dignissimos. Sequi nulla at esse enim cum deserunt
-                eius.
-              </p>
-            </div>
           </div>
+        </div>
+        <div className="offset-lg-1 product-description p-3 mt-4">
+          <h2>This is an example of portfolio detail</h2>
+          <p>
+            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque
+            inventore commodi labore quia quia. Exercitationem repudiandae
+            officiis neque suscipit non officia eaque itaque enim. Voluptatem
+            officia accusantium nesciunt est omnis tempora consectetur
+            dignissimos. Sequi nulla at esse enim cum deserunt eius.
+          </p>
         </div>
       </section>
 
