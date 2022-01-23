@@ -1,5 +1,5 @@
 import React from "react";
-import Discovery from "../assets/working-process/discover.gif";
+import Discovery from "../assets/working-process/discovery1.gif";
 import Planning from "../assets/working-process/planning.gif";
 import Execute from "../assets/working-process/execute.gif";
 import Deliver from "../assets/working-process/deliver.gif";

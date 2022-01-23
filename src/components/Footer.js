@@ -10,14 +10,16 @@ export default function Footer() {
             <div className="col-lg-5 col-md-12 footer-info">
               <a href="/" className="logo d-flex align-items-center">
                 <img src={logo} alt="logo" />
-                <span>Leading Edge Software</span>
+                <span>Leading</span>
+                <span>Edge</span>
+                <span>Software</span>
               </a>
               <p>
                 Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
                 nada terra videa magna derita valies darta donna mare fermentum
                 iaculis eu non diam phasellus.
               </p>
-              <div className="social-links mt-3">
+              <div className="social-links m-3">
                 <a href="#" className="twitter">
                   <i className="bi bi-twitter"></i>
                 </a>

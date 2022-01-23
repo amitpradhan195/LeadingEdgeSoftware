@@ -28,7 +28,9 @@ export default function Navbar() {
       <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="/" className="logo d-flex align-items-center">
           <img src={logo} alt="logo" />
-          <span>Leading Edge Software</span>
+          <span>Leading {"  "}</span>
+          <span>Edge</span>
+          <span>Software</span>
         </a>
 
         <nav id="navbar" className={navbarToggle ? "navbar-mobile" : "navbar"}>
