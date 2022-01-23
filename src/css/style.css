@@ -285,18 +285,15 @@ section {
   font-size: 16px;
   font-weight: 400;
   color: #013289;
-  white-space: nowrap;
-  transition: width 0.3s linear;
-  /* transition: 0.3s; */
-  width: 80px;
+  transition: all 0.3s linear;
 }
 
 .navbar a:hover,
 .navbar li:hover > a {
   color: white;
-  background-color: #564f7b;
-  width: 100px;
-} 
+  background-color: #0071bd;
+  transform: scaleX(1.1);
+}
 
 /**
   * Mobile Navigation 
@@ -794,11 +791,26 @@ p,
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #009961;
+  color: #0071bd;
   line-height: 1;
 }
-.about .content p:last-child {
-  margin-bottom: 0;
+.about .opportunity {
+  border-radius: 10px;
+  margin: 30px 0;
+  border: 2px solid #d5dbdb;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.about .opportunity p {
+  font-size: 22px;
+  font-style: italic;
+  text-align: justify;
+  margin: auto;
+  color: #0071bd;
+}
+
+.about .content p {
+  text-align: justify;
 }
 
 /*--------------------------------------------------------------
@@ -903,7 +915,7 @@ p,
 # Product Details
 --------------------------------------------------------------*/
 .product-info {
-  padding: 5.2vw;
+  padding: 3vw;
   box-shadow: 0px 0 30px rgba(56, 64, 70, 0.08);
 }
 .product-info h3 {
@@ -1074,7 +1086,7 @@ p,
   font-size: 14px;
 }
 .footer .footer-top {
-  background: white url(../assets/footer-bg.png) no-repeat right top;
+  background: white url(../assets/map-nepal.png) no-repeat right top;
   background-size: contain;
   border-top: 1px solid #e1ecff;
   border-bottom: 1px solid #e1ecff;

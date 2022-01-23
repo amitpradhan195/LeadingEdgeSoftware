@@ -15,7 +15,7 @@ import Services from "./layout/Services";
 import ServiceDetail from "./components/ServiceDetail";
 import ProductDetail from "./components/ProductDetail";
 import ErrorPage from "./components/ErrorPage";
-import Product from "./layout/Product";
+import Product from "./layout/Product2";
 
 export default function App() {
   const [isActive, setActive] = useState(false);
@@ -38,7 +38,7 @@ export default function App() {
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/service-detail" element={<ServiceDetail />} />
         <Route exact path="/products" element={<Product />} />
-        <Route exact path="/product-detail" element={<ProductDetail />} />
+        <Route exact path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="*" exact={true} element={<ErrorPage />} />
       </Routes>
       <Footer />
