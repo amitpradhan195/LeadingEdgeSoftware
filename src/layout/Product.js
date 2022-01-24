@@ -1,16 +1,14 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import Khata from "../assets/products/khata.jpg";
-import smartCafe from "../assets/products/smart-cafe.jpg";
-import yatayat from "../assets/products/yatayat.jpg";
+import ProductData from "../data/product-data";
 
 export default function Product() {
   const navigate = useNavigate();
-  const handleOnClick = useCallback(
-    () => navigate("/product-detail", { replace: false }),
-    [navigate]
-  );
+  const handleOnClick = (id) => {
+    navigate(`/product-detail/${id}`, { replace: false });
+  };
+
   return (
     <>
       <section id="breadcrumbs" className="breadcrumbs">
@@ -30,113 +28,33 @@ export default function Product() {
       <section id="product" className="product">
         <div className="container">
           <div className="row product-container">
-            <div
-              className="col-lg-4 col-md-6 product-item"
-              onClick={handleOnClick}
-            >
-              <img src={Khata} className="img-fluid" alt="portfolio" />
-              <div className="product-info">
-                <h4>App 1</h4>
-                <a href="/product-detail" className="more-details">
-                  More Details
-                </a>
-                <a
-                  href="#"
-                  className="visit-link"
-                  title="Visit Site"
-                  target="_blank"
+            {ProductData.map((value, index) => {
+              return (
+                <div
+                  className="col-lg-4 col-md-6 product-item"
+                  onClick={() => handleOnClick(value.id)}
+                  key={index}
                 >
-                  <i className="bi bi-link"></i>
-                  Visit site
-                </a>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-4 col-md-6 product-item"
-              onClick={handleOnClick}
-            >
-              <img src={smartCafe} className="img-fluid" alt="portfolio" />
-              <div className="product-info">
-                <h4>Web 2</h4>
-                <a href="/product-detail" className="more-details">
-                  More details
-                </a>
-                <a
-                  href="#"
-                  className="visit-link"
-                  title="Visit Site"
-                  target="_blank"
-                >
-                  <i className="bi bi-link"></i>
-                  Visit site
-                </a>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-4 col-md-6 product-item"
-              onClick={handleOnClick}
-            >
-              <img src={yatayat} className="img-fluid" alt="portfolio" />
-              <div className="product-info">
-                <h4>Web 2</h4>
-                <a href="/product-detail" className="more-details">
-                  More details
-                </a>
-                <a
-                  href="#"
-                  className="visit-link"
-                  title="Visit Site"
-                  target="_blank"
-                >
-                  <i className="bi bi-link"></i>
-                  Visit site
-                </a>
-              </div>
-            </div>
-
-            {/* <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
-              <div className="product-info">
-                <h4>Web 2</h4>
-                <a href="/product-detail" className="more-details">
-                  More details
-                </a>
-                <a href="#" className="visit-link" title="Visit Site" target="_blank">
-                  <i className="bi bi-link"></i>
-                  Visit site
-                </a>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
-              <div className="product-info">
-                <h4>Web 2</h4>
-                <a href="/product-detail" className="more-details">
-                  More details
-                </a>
-                <a href="#" className="visit-link" title="Visit Site" target="_blank">
-                  <i className="bi bi-link"></i>
-                  Visit site
-                </a>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item" onClick={handleOnClick}>
-              <img src={Portfolio1} className="img-fluid" alt="portfolio" />
-              <div className="product-info">
-                <h4>Web 2</h4>
-                <a href="/product-detail" className="more-details">
-                  More details
-                </a>
-                <a href="#" className="visit-link" title="Visit Site" target="_blank">
-                  <i className="bi bi-link"></i>
-                  Visit site
-                </a>
-              </div>
-            </div> */}
+                  <img src={value.imgsrc} className="img-fluid" alt="Product" />
+                  <div className="product-info">
+                    <h4>{value.title}</h4>
+                    <a href="/product-detail" className="more-details">
+                      More Details
+                    </a>
+                    <a
+                      href={value.url}
+                      className="visit-link"
+                      title="Visit Site"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-link"></i>
+                      Visit site
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

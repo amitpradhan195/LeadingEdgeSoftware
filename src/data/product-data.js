@@ -22,7 +22,7 @@ const products = [
     {
         id:3,
         imgsrc:Yatayat,
-        title:"yatayat",
+        title:"Yatayat",
         url:"abc.com",
         features:['feature1','feature2','feature3','feature4'],
         description:"about yatayat",

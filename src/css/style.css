@@ -73,8 +73,8 @@ section {
   opacity: 0;
   right: 15px;
   bottom: 15px;
+  border: none;
   z-index: 99999;
-  /* background: #0071bd; */
   background-image: linear-gradient(to bottom, #0071bd, #ad2e3a);
   width: 40px;
   height: 40px;
@@ -570,10 +570,11 @@ section {
   }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1055px) {
   .services .service-list .service-item {
     height: 24vw;
     width: 24vw;
+    padding: 40px;
   }
 }
 
@@ -581,7 +582,7 @@ section {
   .services .service-list .service-item {
     height: 23vw;
     width: 23vw;
-    padding: 40px;
+    padding: 30px;
   }
 }
 
@@ -589,7 +590,7 @@ section {
   .services .service-list .service-item {
     height: 28vw;
     width: 28vw;
-    padding: 60px;
+    padding: 40px;
   }
   .services .service-list .service-item img {
     width: 7vw;
