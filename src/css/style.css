@@ -513,11 +513,11 @@ section {
 .services .service-list .service-item {
   background-color: white;
   border: 1px solid rgb(184, 184, 184);
-  height: 20vw;
-  width: 20vw;
+  height: 22vw;
+  width: 22vw;
   margin: 15px auto;
   border-radius: 50%;
-  padding: 60px;
+  padding: 80px;
   cursor: pointer;
   transition: all 0.4s linear;
 }
@@ -556,10 +556,26 @@ section {
   margin: 0 auto;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1600px) {
+  .services .service-list .service-item {
+    height: 25vw;
+    width: 25vw;
+  }
+}
+
+@media (max-width: 1400px) {
   .services .service-list .service-item {
     height: 22vw;
     width: 22vw;
+    padding: 60px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .services .service-list .service-item {
+    height: 23vw;
+    width: 23vw;
+    padding: 70px;
   }
 }
 
@@ -656,7 +672,6 @@ section {
     height: 20vw;
   }
 }
-
 /*--------------------------------------------------------------
 # Services Details and Product Details
 --------------------------------------------------------------*/
